@@ -1,0 +1,96 @@
+.card{
+   
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+    
+}
+.column {
+    float: left;
+    width: 15.3%;
+    margin-top: -25%;
+    margin-left: 44%;
+    padding-left: 3px;
+    text-align: center;
+    position:fixed;
+    background-color:white;
+   
+  }
+  .title {
+    color: grey;
+  }
+  .container {
+    padding: 0 16px;
+  }
+  
+  .container::after, .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  .button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .button:hover {
+    background-color: #555;
+  }
+  
+  @media screen and (max-width: 650px) {
+    .column {
+      width: 100%;
+      display: block;
+    }
+  }
+  
+  
+  .gmap_iframe{
+    width:400px;
+    height:220px;
+    margin-top: 76px;
+   
+  }
+  .top{
+    height:80px;
+    width:90%;
+    margin-left:50px;
+    color:white;
+    border-radius: 5px 5px 5px white;
+    background-color: rgba(0,0,0,0.1);
+	   box-shadow: 0 0 17px #333;
+  }
+  
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height:100%
+  }   
+  .drop-in {
+    animation: drop-in 3s ease 200ms backwards;
+   }
+   
+   .drop-in-2 {
+    animation: drop-in 2s ease 455ms backwards;
+    
+    
+   }
+   @keyframes drop-in {
+    from {
+     opacity: 0;
+     transform: translateY(-100px);
+    }
+    to {
+     opacity: 1;
+     transform: translate(0px);
+    }
+   }
+   

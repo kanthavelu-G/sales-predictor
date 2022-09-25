@@ -1,0 +1,40 @@
+<body>
+<video autoplay muted loop id="myVideo">
+  <source src="https://player.vimeo.com/external/330021206.sd.mp4?s=cb7c6d594eda6d0edb74df1915240b64a3790100&profile_id=164&oauth2_token_id=57447761" type="video/mp4" type="video/mp4">
+ 
+</video>
+<div class="container" >
+    <mat-card class="card" >
+      <mat-form-field appearance="fill" >
+        <mat-label style="color:white">Input</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label style="color:white">Select</mat-label>
+        <mat-select>
+          <mat-option value="one">10 Month</mat-option>
+          <mat-option value="two">20 Month</mat-option>
+          <mat-option value="three">30 Month</mat-option>
+          <mat-option value="four">40 Month</mat-option>
+        </mat-select>
+      </mat-form-field>
+        <mat-form-field floatPlaceholder="never">
+        <input [hidden]="true" (change)="onFileSelect($event)" type="file" accept=".csv" #fileSelect>
+        <label style="color:white">Upload a File</label>
+        <input readonly matInput [(ngModel)]="filename" style="color:aqua"  />
+        <button *ngIf="this.file" (click)="deleteFile(); fileSelect.value='';" matSuffix matTooltip="Remove selected file"
+                [matTooltipPosition]="'above'" type="button" color="warn" mat-icon-button>
+                <mat-icon>close</mat-icon>
+              </button>
+        <button matSuffix mat-icon-button (click)="fileSelect.click();"  matTooltip="upload a file" [matTooltipPosition]="'below'">
+          <mat-icon class="icon-display"> attach_file</mat-icon>
+        </button> 
+      </mat-form-field>
+      <button (click)="fileUpload()"  mat-flat-button  class="send"  >
+        <span *ngIf="!showLoader">Upload</span>
+        <mat-spinner style="margin-left: 43%;" diameter="25" strokeWidth="4" *ngIf="showLoader"></mat-spinner>
+      </button>
+    </mat-card> 
+  
+</div>
+</body>

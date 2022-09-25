@@ -1,0 +1,59 @@
+.container{
+    display: flex;
+    margin-top: 8%;
+    position:absolute;
+    margin-left: 33%;
+   
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    min-width: 254px;
+    box-shadow: 4px 4px 4px 4px  white;
+    background-color: rgb(148, 214, 226);
+    width: 300px;
+    margin-top: 45px;
+	border-radius: 25px;
+	background-color: rgba(0,0,0,0.1);
+	box-shadow: 0 0 17px rgb(32, 32, 32);
+    position: relative;
+    max-height:500px;
+    height:300px
+    
+}
+::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #ffffff !important;
+}
+.send{
+    background-color: white;
+    box-shadow:3px 3px 3px  white;
+    border: solid white;
+    width: 60px;
+    margin-left: 32.5%;
+    padding-left: 0.2px;
+    padding-right: 0.2px;
+    margin-top: 20px;
+
+    
+}
+.send:hover{
+    box-shadow:4px 4px 4px   rgb(56, 118, 226);
+}
+.icon-display {
+    transform: scale(2);
+    font-weight: 700;
+ }
+
+ #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+  }
+    body{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjYB0wypYhPLXfCUzadZBH2HgMEa3uctDwuw&usqp=CAU);
+        background-repeat:no-repeat;
+        background-size: 100%,100%;
+    }
